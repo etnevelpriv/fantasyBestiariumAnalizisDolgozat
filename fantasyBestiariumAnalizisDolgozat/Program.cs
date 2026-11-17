@@ -13,14 +13,18 @@
             //}
 
             SzornyElemzo elemzo = new(szornyek);
-            int osszesSzornySzama = elemzo.OsszesSzornySzama();
-            IEnumerable<string> veszelyesSzornyekNevei = elemzo.VeszelyesSzornyekNevei();
+            //int osszesSzornySzama = elemzo.OsszesSzornySzama();
+            //IEnumerable<string> veszelyesSzornyekNevei = elemzo.VeszelyesSzornyekNevei();
+            IEnumerable<string> egyediElohelyek = elemzo.EgyediElohelyek();
 
-            Console.WriteLine(osszesSzornySzama);
-            foreach (string nev in veszelyesSzornyekNevei) {
-                Console.WriteLine(nev);
+            //Console.WriteLine(osszesSzornySzama);
+            //foreach (string nev in veszelyesSzornyekNevei) {
+            //    Console.WriteLine(nev);
+            //};
+            foreach (string elohely in egyediElohelyek)
+            {
+                Console.WriteLine(elohely);
             };
-
         }
     }
 }

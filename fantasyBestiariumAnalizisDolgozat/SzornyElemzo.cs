@@ -22,5 +22,9 @@ namespace fantasyBestiariumAnalizisDolgozat
             return this.Szornyek.Where(szorny=>szorny.VeszelyesE == true).Select(szorny=>szorny.Nev).ToList();
         }
 
+        public IEnumerable<string> EgyediElohelyek()
+        {
+            return this.Szornyek.GroupBy(szorny=>szorny.Elohely).Select(szornyekGrouped=>szornyekGrouped.Key).ToList();
+        }
     }
 }
