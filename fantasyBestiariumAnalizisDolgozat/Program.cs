@@ -16,15 +16,17 @@
             //int osszesSzornySzama = elemzo.OsszesSzornySzama();
             //IEnumerable<string> veszelyesSzornyekNevei = elemzo.VeszelyesSzornyekNevei();
             IEnumerable<string> egyediElohelyek = elemzo.EgyediElohelyek();
+            double atlagVeszelyesseg = elemzo.AtlagVeszelyesseg();
 
             //Console.WriteLine(osszesSzornySzama);
             //foreach (string nev in veszelyesSzornyekNevei) {
             //    Console.WriteLine(nev);
             //};
-            foreach (string elohely in egyediElohelyek)
-            {
-                Console.WriteLine(elohely);
-            };
+            //foreach (string elohely in egyediElohelyek)
+            //{
+            //    Console.WriteLine(elohely);
+            //};
+            Console.WriteLine(atlagVeszelyesseg);
         }
     }
 }

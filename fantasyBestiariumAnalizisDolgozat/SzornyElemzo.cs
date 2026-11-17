@@ -26,5 +26,10 @@ namespace fantasyBestiariumAnalizisDolgozat
         {
             return this.Szornyek.GroupBy(szorny=>szorny.Elohely).Select(szornyekGrouped=>szornyekGrouped.Key).ToList();
         }
+        
+        public double AtlagVeszelyesseg()
+        {
+            return this.Szornyek.Average(szorny => szorny.VeszelyessegiSzint);
+        }
     }
 }
