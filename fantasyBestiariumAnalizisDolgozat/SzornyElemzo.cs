@@ -37,5 +37,10 @@ namespace fantasyBestiariumAnalizisDolgozat
             int legmagasabbVeszelyessegiSzint = this.Szornyek.Max(szorny => szorny.VeszelyessegiSzint);
             return this.Szornyek.Where(szorny => szorny.VeszelyessegiSzint == legmagasabbVeszelyessegiSzint).ToList();
         }
+
+        public IEnumerable<Szorny> MocsariVeszelyesSzornyek()
+        {
+            return this.Szornyek.Where(szorny => szorny.Elohely == "Fekete Mocsár" && szorny.VeszelyessegiSzint >= 5).OrderByDescending(szorny => szorny.VeszelyessegiSzint).ToList();
+        }
     }
 }
