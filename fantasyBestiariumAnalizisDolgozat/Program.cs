@@ -18,7 +18,8 @@
             //IEnumerable<string> egyediElohelyek = elemzo.EgyediElohelyek();
             //double atlagVeszelyesseg = elemzo.AtlagVeszelyesseg();
             //IEnumerable<Szorny> legveszelyesebbSzornyek = elemzo.LegveszelyesebbSzornyek();
-            IEnumerable<Szorny> mocsariVeszelyesSzornyek = elemzo.MocsariVeszelyesSzornyek();
+            //IEnumerable<Szorny> mocsariVeszelyesSzornyek = elemzo.MocsariVeszelyesSzornyek();
+            bool vanExtremTuzGyengeSzorny = elemzo.VanExtremTuzGyengeSzorny();
 
 
             //Console.WriteLine(osszesSzornySzama);
@@ -30,11 +31,11 @@
             //    Console.WriteLine(elohely);
             //};
             //Console.WriteLine(atlagVeszelyesseg);
-            foreach (Szorny szorny in mocsariVeszelyesSzornyek)
-            {
-                Console.WriteLine(szorny.Elohely);
-            };
-
+            //foreach (Szorny szorny in mocsariVeszelyesSzornyek)
+            //{
+            //    Console.WriteLine(szorny.Elohely);
+            //};
+            Console.WriteLine(vanExtremTuzGyengeSzorny);
         }
     }
 }

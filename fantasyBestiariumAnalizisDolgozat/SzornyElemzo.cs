@@ -42,5 +42,10 @@ namespace fantasyBestiariumAnalizisDolgozat
         {
             return this.Szornyek.Where(szorny => szorny.Elohely == "Fekete Mocsár" && szorny.VeszelyessegiSzint >= 5).OrderByDescending(szorny => szorny.VeszelyessegiSzint).ToList();
         }
+
+        public bool VanExtremTuzGyengeSzorny()
+        {
+            return this.Szornyek.Any(szorny => szorny.FoGyengeseg == "Tűz" && szorny.VeszelyessegiSzint >= 9);
+        }
     }
 }
