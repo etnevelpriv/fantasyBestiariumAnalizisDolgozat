@@ -31,5 +31,11 @@ namespace fantasyBestiariumAnalizisDolgozat
         {
             return this.Szornyek.Average(szorny => szorny.VeszelyessegiSzint);
         }
+
+        public IEnumerable<Szorny> LegveszelyesebbSzornyek()
+        {
+            int legmagasabbVeszelyessegiSzint = this.Szornyek.Max(szorny => szorny.VeszelyessegiSzint);
+            return this.Szornyek.Where(szorny => szorny.VeszelyessegiSzint == legmagasabbVeszelyessegiSzint).ToList();
+        }
     }
 }
