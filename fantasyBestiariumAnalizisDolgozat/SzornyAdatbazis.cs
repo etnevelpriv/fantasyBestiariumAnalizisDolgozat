@@ -8,7 +8,7 @@ namespace fantasyBestiariumAnalizisDolgozat
 {
     internal class SzornyAdatbazis
     {
-        private string ConnectionString = "server=127.0.0.1;uid=root;pwd=;database=fantasybestiariumdb";
+        private readonly string ConnectionString = "server=127.0.0.1;uid=root;pwd=;database=fantasybestiariumdb";
         List<Szorny> Szornyek = new();
         public List<Szorny> GetSzornyekFromDatabase ()
         {
