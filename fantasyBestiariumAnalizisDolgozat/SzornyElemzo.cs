@@ -47,5 +47,10 @@ namespace fantasyBestiariumAnalizisDolgozat
         {
             return this.Szornyek.Any(szorny => szorny.FoGyengeseg == "Tűz" && szorny.VeszelyessegiSzint >= 9);
         }
+
+        public IEnumerable<string> SzornyekSzamaElohelyenkent()
+        {
+            return this.Szornyek.GroupBy(szorny => szorny.Elohely).Select(groupedSzornyek => $"{groupedSzornyek.Key} : {groupedSzornyek.Count()}").ToList();
+        }
     }
 }
